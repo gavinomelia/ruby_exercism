@@ -20,16 +20,16 @@ module Blackjack
     hand = parse_card(card1) + parse_card(card2)
 
     case hand
-    when 21
-      return "W" if dealer < 10
-      return "S"
+    when 0..11
+      "H"
     when 17..20
       "S"
     when 12..16
       return "S" if dealer < 7
       return "H"
-    when 0..11
-      "H"
+    when 21
+      return "W" if dealer < 10
+      return "S"
     else
       "P"
     end

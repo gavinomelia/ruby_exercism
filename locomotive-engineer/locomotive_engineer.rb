@@ -9,10 +9,10 @@ class LocomotiveEngineer
   end
 
   def self.add_missing_stops(route, **stops)
-    combined = {**route, stops: stops.values}
+    {**route, stops: stops.values}
   end
 
   def self.extend_route_information(route, more_route_information)
-    consolidated = {**route, **more_route_information}
+    {**route, **more_route_information}
   end
 end
